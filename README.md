@@ -1,8 +1,8 @@
-Página sobre 3AM
+3AM
 
 Este es el sitio web del dúo musical venezolano 3AM. El sitio web contiene información sobre el grupo, álbumes sencillos, así como enlaces a sus redes sociales y plataformas de música. Contenido
 
-Página de inicio: La página de inicio tiene enlaces a las redes sociales de 3AM y su música en YouTube.
+Página de inicio: La página de inicio tiene enlaces a su música en Spotify
 
 Alrededor de las 3 am: Información sobre la biografía y carrera del dúo.
 

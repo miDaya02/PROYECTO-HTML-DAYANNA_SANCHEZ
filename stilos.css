@@ -5,13 +5,20 @@
 }
 
 @font-face {
-    font-family: "Shrikhand-Regular";
-    src: url("Shrikhand-Regular.ttf") format('truetype');
+    font-family: "GUNPLAY_.ttf";
+    src: url("GUNPLAY_.ttf") format('truetype');
 }
 
-.brand h2 {
-    font-family: "Shrikhand-Regular", "sans-serif";
+.menu {
+    font-family: "GUNPLAY_.ttf", "sans-serif";
+    font-size: 2em;
 }
+
+@font-face {
+    font-family: "batmfo__.ttf";
+    src: url("batmfo__.ttf") format('truetype');
+}
+
 
 @font-face {
     font-family: "neoneon.ttf";
@@ -19,12 +26,14 @@
 }
 
 body {
-    background-image: url("workout.jpg");
+    background-image: url("3AM (4).jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .navbar {
@@ -36,9 +45,7 @@ body {
     top: 0;
     left: 0;
     padding: 0.5em;
-    position: fixed;
     z-index: 5;
-    background-color: rgba(7, 7, 7, 0.55);
 }
 
 .brand {
@@ -63,17 +70,13 @@ body {
 }
 
 .menu li a {
-    color: #fff;
+    color: #0066ff;
     text-decoration: none;
     padding: 0.5rem;
 }
 
 .menu li a:hover {
-    color: #6688e7;
-}
-
-.menu .active {
-    color: rgb(0, 38, 255);
+    color: #0d1d47;
 }
 
 .menu li a:hover {
@@ -82,7 +85,6 @@ body {
 }
 
 .informacion {
-    background-color: rgba(7, 7, 7, 0.55);
     position: absolute;
     width: 100vw; 
     height: 100vh; 
@@ -91,10 +93,9 @@ body {
 }
 
 .informacion h1 {
-    font-family: "neoneon.ttf", "sans-serif";
+    font-family: "batmfo__.ttf", "sans-serif";
     text-align: center;
-    margin-top: 4%;
-    color: #c994f5;
+    color: #ff8800;
     font-size: 5em;
 }
 
@@ -125,28 +126,81 @@ body {
 .alerta{
     display: none;
 }
+.anuncio{
+    display: none;  
+}
 
-@media(max-width: 600px) {
-    .alerta {
-        display: block;
-        color: red;
-        z-index: 1;
-    }
-
-    * {
-        display: none;
-    }
-
-    body {
-        background-color: white;
-        z-index: 3;
-    }
+@media (max-width: 400px) {
 
     .navbar {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8em 0;
+    }
+
+    .brand {
+        margin: 10px 0;
     }
 
     .wrapper {
-        display: none;
+        padding: 1rem;
     }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li a {
+        padding: 0.8rem 0;
+    }
+
+    .informacion {
+        padding: 2rem;
+        
+    }
+
+    .informacion h1 {
+        font-size: 3em;
+    }
+
+    .informacion p {
+        width: 100%; 
+        margin: 2% 0; 
+        text-align: left; 
+        font-size: 1.2em; 
+    }
+
+    .informacion p span {
+        display: block; 
+        margin-left: 0; 
+    }
+
+    .informacion video {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 400px) {
+    .anuncio {
+        background:transparent;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 63vh;
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        width: 100%;
+     }
+     .anuncio img{
+        width: 100%;
+     }
+     .informacion,
+     .wrapper{
+        display: none;
+     }
+     body{
+        background: #e6dfd4;
+     }
 }

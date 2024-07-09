@@ -5,6 +5,16 @@
 }
 
 @font-face {
+    font-family: "GUNPLAY_.ttf";
+    src: url("GUNPLAY_.ttf") format('truetype');
+}
+
+.menu {
+    font-family: "GUNPLAY_.ttf", "sans-serif";
+    font-size: 2em;
+}
+
+@font-face {
     font-family: "Shrikhand-Regular";
     src: url("Shrikhand-Regular.ttf") format('truetype');
 }
@@ -19,6 +29,7 @@
 }
 
 body {
+    overflow-x: hidden;
     height: 100%;
     margin: 0;
 }
@@ -32,9 +43,8 @@ body {
     top: 0;
     left: 0;
     padding: 0.5em;
-    position: fixed;
     z-index: 5;
-    background-color: rgba(7, 7, 7, 0.55);
+    position: fixed;
 }
 
 .brand {
@@ -59,17 +69,13 @@ body {
 }
 
 .menu li a {
-    color: #fff;
+    color: #0066ff;
     text-decoration: none;
     padding: 0.5rem;
 }
 
 .menu li a:hover {
-    color: #6688e7;
-}
-
-.menu .active {
-    color: rgb(0, 38, 255);
+    color: #0d1d47;
 }
 
 .menu li a:hover {
@@ -97,7 +103,7 @@ body {
     background-size: cover;
     opacity: 0;
     animation: changeBackground 19.25s infinite;
-    z-index: 1;
+    z-index: -1;
 }
 
 .bg-layer:nth-child(1) {
@@ -172,7 +178,6 @@ body {
     font-size: 90px;
     text-align: center;
     padding: 10px;
-    z-index: 1;
     position: relative;
 }
 
@@ -180,7 +185,6 @@ body {
     width: 100%;
     margin: 3%;
     flex-direction: row;
-    z-index: 1;
     position: relative;
 }
 
@@ -220,25 +224,121 @@ body {
     display: none;
 }
 
-@media(max-width: 600px) {
-    .alerta {
-        display: block;
-        color: red;
-    }
-
-    * {
-        display: none;
-    }
-    
-    body {
-        background-color: white;
-    }
-
+@media (max-width: 400px) {
     .navbar {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    .brand {
+        margin: 10px 0;
     }
 
     .wrapper {
-        display: none;
+        padding: 1rem;
     }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        padding: 0.8rem 0;
+    }
+
+    .bg-layer {
+        display: none; /* Ocultar las capas de fondo en dispositivos móviles para evitar conflictos visuales */
+    }
+
+    .titulo1,
+    .titulo2 {
+        font-size: 40px; /* Reducir el tamaño del texto de los títulos */
+    }
+
+    .album1,
+    .album2,
+    .container1,
+    .container2,
+    .container3,
+    .container4,
+    .container5,
+    .container6,
+    .container7,
+    .container8,
+    .container9,
+    .container10,
+    .container11,
+    .container12,
+    .container13,
+    .container14,
+    .container16,
+    .container17,
+    .container18,
+    .container19,
+    .container20,
+    .container21,
+    .container22,
+    .container23,
+    .container24,
+    .container25,
+    .container26 {
+        width: 100%; /* Hacer que los elementos dentro de .albumes y .disqueria ocupen el ancho completo */
+        padding: 2%; /* Ajustar el padding para mantener un espaciado adecuado */
+    }
+}
+.anuncio{
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .anuncio {
+        background:transparent;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        width: 100%;
+     }
+     .anuncio img{
+        width: 100%;
+     }
+     .album1,
+     .album2,
+     .container1,
+     .container2,
+     .container3,
+     .container4,
+     .container5,
+     .container6,
+     .container7,
+     .container8,
+     .container9,
+     .container10,
+     .container11,
+     .container12,
+     .container13,
+     .container14,
+     .container16,
+     .container17,
+     .container18,
+     .container19,
+     .container20,
+     .container21,
+     .container22,
+     .container23,
+     .container24,
+     .container25,
+     .container26{
+        display: none;
+     }
+     body{
+        background-color: #e6dfd4;
+     }
+     .background{
+        display: none;
+     }
 }

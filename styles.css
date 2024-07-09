@@ -5,21 +5,34 @@
 }
 
 @font-face {
+    font-family: "GUNPLAY_.ttf";
+    src: url("GUNPLAY_.ttf") format('truetype');
+}
+
+.menu {
+    font-family: "GUNPLAY_.ttf", "sans-serif";
+    font-size: 2em;
+}
+
+@font-face {
     font-family: "Shrikhand-Regular";
     src: url("Shrikhand-Regular.ttf") format('truetype');
 }
 
 .brand h2 {
     font-family: "Shrikhand-Regular", "sans-serif";
+    font-size: 2em;
+    color: #0066ff;
 }
 
 body {
-    background-image: url("3AM.jpg");
+    overflow-y: hidden;
+}
+.todo{
+    background: url("3AM (1).jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin: 0;
-    padding: 0;
 }
 
 .navbar {
@@ -27,10 +40,11 @@ body {
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    width: 90%;
+    width: 100%;
     top: 0;
+    left: 0;
     padding: 0.5em;
-    position: fixed;
+    z-index: 5;
 }
 
 .brand {
@@ -38,10 +52,8 @@ body {
 }
 
 .wrapper {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    padding: 2rem;
+    width: 100%; 
+    height: 100vh;
 }
 
 .menu {
@@ -55,17 +67,17 @@ body {
 }
 
 .menu li a {
-    color: #fff;
+    color: #0066ff;
     text-decoration: none;
     padding: 0.5rem;
 }
 
 .menu li a:hover {
-    color: #6688e7;
+    color: #0d1d47;
 }
 
 .menu .active {
-    color: rgb(0, 38, 255);
+    color: rgb(98, 0, 255);
 }
 
 .menu li a:hover {
@@ -73,67 +85,132 @@ body {
     color: #191c32;
 }
 
-.inicio img {
-    width: 30%;
-    max-width: 100%;
-    height: auto;
-    grid-column: 1;
-    z-index: 1;
-}
 
-.info-content span {
-    margin: 1%;
-}
-
-
-.info-content i {
-    margin: 4%;
-}
-
-.info-content img {
-    width: 15%;
-    max-width: 100%;
-    height: auto;
+.foto {
     margin: 2%;
-    margin-left: 8%;
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    padding-top: 4%;
+    animation: entrar 1.5s ease-out forwards, flotar 3s ease-in-out infinite 1.5s;
 }
 
-.logos {
-    padding-left: 4%;
-    padding-top: 5%;
-    margin: 3%;
+.foto img {
+    width: 80%;
+    height: 80%;
+    border: 16px solid white;
 }
 
-.logos img {
-    width: 4%;
-    height: 4%;
-    padding: 1%;
+@keyframes entrar {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-.alerta {
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.inicio {
+    padding-top: 4%;
+    width: 43%;
+    height: auto;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.inicio img {
+    width: 100%;
+    height: auto;
+}
+
+.imagen img {
+    width: 95%;
+    height: auto;
+}
+
+.info-content img{
+    width: 70%;
+    height: auto;
+}
+.anuncio{
     display: none;
 }
 
-@media(max-width: 600px) {
-    .alerta {
-        display: block;
-        color: red;
-    }
-
-    * {
-        display: none;
-        
-    }
+@media (max-width: 800px) {
 
     body {
-        background-color: white;
+        background-size: cover;
     }
 
     .navbar {
-        display: none;
+        width: 100%;
     }
 
     .wrapper {
-        display: none;
+        padding: 2rem;
     }
+
+    .foto {
+        width: 100%;
+        padding-top: 10%;
+        animation: entrar 1.5s ease-out forwards, flotar 3s ease-in-out infinite 1.5s;
+    }
+    
+    .foto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .inicio {
+        width: 100%;
+        padding-top: 5%;
+    }
+
+    .inicio img {
+        width: 70%;
+    }
+
+    .info-content img {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .anuncio {
+        background:transparent;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        width: 100%;
+     }
+     .anuncio img{
+        width: 100%;
+     }
+     .wrapper{
+        display: none;
+     }
+     body{
+        background-color: #e6dfd4;
+     }
 }

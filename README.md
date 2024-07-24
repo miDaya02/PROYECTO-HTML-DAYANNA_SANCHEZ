@@ -7,8 +7,7 @@
 | 2. | [Características](#Caracteristicas) |
 | 3. | [Tecnologías Utilizadas](#Tecnologias) |
 | 4. | [Uso del Repositorio](#Uso) |
-| 5. | [Instrucciones de Ejecución](#Instrucciones) |
-| 6. | [Autora](#Autora) |
+| 5. | [Autora](#Autora) |
 
 ## Descripcion🚀
 

@@ -67,6 +67,8 @@ Ir a la carpeta del proyecto.
 > [!NOTE]
 >Es completamente responsive.
 
+## Autora👤
+[Michelle Sánchez](https://github.com/miDaya02)
 ## Página de 3AM
 
 Abra el archivo Index.html en su navegador web favorito para ver la página de inicio.

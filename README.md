@@ -71,8 +71,3 @@ Ir a la carpeta del proyecto.
 
 Abra el archivo Index.html en su navegador web favorito para ver la página de inicio.
 Para ver otras páginas, abra los archivos nosotros.html y album.html en el navegador.
-Recursos utilizados
-
--HTML5
-
--CSS3
